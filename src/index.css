@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles and theme setup */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #E0E5EC;
+    color: #5a6470;
+    margin: 0; /* Remove default browser margin */
+}
+
+/* Neumorphic style for buttons and interactive elements */
+.neumorphic-button {
+    background: #E0E5EC;
+    border-radius: 12px;
+    box-shadow: 6px 6px 12px #a3b1c6, -6px -6px 12px #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+.neumorphic-button:hover {
+    box-shadow: 4px 4px 8px #a3b1c6, -4px -4px 8px #ffffff;
+}
+
+.neumorphic-button:active {
+    box-shadow: inset 6px 6px 12px #a3b1c6, inset -6px -6px 12px #ffffff;
+}
+
+/* Floating Hire Me button style */
+.btn-hire {
+    background-color: #000000;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s ease;
+}
+.btn-hire:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/* Premium floating shadow for the main H1 title */
+.floating-text {
+    font-weight: 800;
+    color: #4b5563;
+    text-shadow:
+        1px 1px 1px #ffffff,
+        2px 2px 1px #d1d9e6,
+        3px 3px 1px #d1d9e6,
+        4px 4px 1px #d1d9e6,
+        5px 5px 1px #d1d9e6,
+        6px 6px 10px rgba(163, 177, 198, 0.7),
+        -1px -1px 1px #ffffff;
+}
+
+/* Floating shadow for cards */
+.floating-card {
+    background: #E0E5EC;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px #a3b1c6, -10px -10px 30px #ffffff;
+    transition: all 0.3s ease;
+}
+.floating-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 15px 15px 35px #a3b1c6, -15px -15px 35px #ffffff;
+}
+
+/* Black project buttons */
+.project-button {
+    background-color: #2d3748; /* dark gray-blue */
+    color: white;
+    border-radius: 6px; /* boxy edges */
+    transition: all 0.2s ease-in-out;
+    border: 1px solid #4a5568;
+}
+.project-button:hover {
+    background-color: #1a202c; /* darker */
+}
+
+/* New Skills Bar Style */
+.skills-bar-dark {
+    background-color: #2d3748;
+    padding: 1.5rem 0; /* Vertical padding */
+    width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.skills-bar-dark::-webkit-scrollbar {
+    display: none;
+}
+.skills-bar-dark span {
+    color: #a0aec0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+/* Footer Styles */
+.footer-dark {
+    background-color: #262626;
+    color: #a0aec0; /* light gray */
+}
+
+/* Neumorphic dark button styles */
+.neumorphic-dark-pressed {
+    background: #262626;
+    border-radius: 12px;
+    color: #ffffff; /* White text */
+    box-shadow: inset 5px 5px 10px #1a1a1a, inset -5px -5px 10px #323232;
+    transition: all 0.2s ease-in-out;
+}
+.neumorphic-dark-raised {
+    background: #262626;
+    border-radius: 12px;
+    color: #ffffff;
+    box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #323232;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Social icon hover effect */
+.social-icon {
+    color: #ffffff; /* White logos */
+    transition: opacity 0.2s ease-in-out;
+}
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+/* FAQ Accordion Styles */
+.faq-container {
+    background: #E0E5EC;
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: inset 8px 8px 16px #a3b1c6, inset -8px -8px 16px #ffffff;
+}
+.faq-item {
+    background-color: #E0E5EC;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 6px 6px 12px #a3b1c6, -6px -6px 12px #ffffff;
+}
+.faq-item:last-child {
+    margin-bottom: 0;
+}
+.faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 1rem;
+    list-style: none; /* Remove default marker */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-item summary::-webkit-details-marker {
+    display: none; /* Hide marker for Chrome, Safari */
+}
+.faq-item .faq-content {
+    padding: 0 1rem 1rem 1rem;
+}
+.faq-item .plus-icon {
+    transition: transform 0.2s ease-in-out;
+}
+.faq-item[open] .plus-icon {
+    transform: rotate(45deg);
+}
+
+/* Simple round icon background */
+.icon-circle {
+    background-color: #ffffff; /* Changed to white */
+    padding: 0.75rem; /* 12px */
+    border-radius: 9999px; /* full */
+}
+
+/* Scroll-driven Text Bar */
+.scroll-text-container {
+    background-color: #2d3748;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+.scroll-text-bar {
+    white-space: nowrap;
+    font-family: 'Oswald', sans-serif; /* Condensed font */
+    font-size: 1rem; /* Reduced size */
+    font-weight: 700; /* Bold */
+    color: #a0aec0;
+    text-transform: uppercase; /* All caps */
+    padding: 0.1rem 0; /* Reduced space between rows */
+}
+.scroll-text-bar span {
+    display: inline-block;
+    padding: 0 0.5rem; /* Reduced space between words */
+}
+#scroll-bar-2, #scroll-bar-4 {
+    margin-left: -150px; /* Initial offset for rows 2 and 4 */
+}

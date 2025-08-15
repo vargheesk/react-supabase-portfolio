@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
 
 const Footer = ({ introText, linkedinUrl, githubUrl, instagramUrl, cvUrl }) => {
-  const [year, setYear] = useState(new Date().getFullYear());
+  const [year] = useState(new Date().getFullYear());
   const [subject, setSubject] = useState('');
   const [body, setBody] = useState('');
   const [formState, setFormState] = useState({ loading: false, error: null, success: null });
@@ -32,7 +32,7 @@ const Footer = ({ introText, linkedinUrl, githubUrl, instagramUrl, cvUrl }) => {
     e.preventDefault();
     setFormState({ loading: true, error: null, success: null });
 
-    const { data, error } = await supabase.functions.invoke('contact-form', {
+    const { error } = await supabase.functions.invoke('contact-form', {
       body: { subject, body },
     });
 

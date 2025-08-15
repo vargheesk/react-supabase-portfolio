@@ -10,7 +10,6 @@ import Faq from '../components/Faq';
 import Footer from '../components/Footer';
 import Experience from '../components/Experience';
 import Certificates from '../components/Certificates';
-import { supabase } from '../lib/supabaseClient';
 
 const HomePage = () => {
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
@@ -58,7 +57,7 @@ const HomePage = () => {
         setSiteData({
           projects: projectsRes.data || [],
           skills: skillsRes.data || [],
-          experiences: experienceRes.data || [],
+          experiences: experiencesRes.data || [],
           certificates: certificatesRes.data || [],
           faq: faqRes.data || [],
           siteConfig: siteConfigObject,
